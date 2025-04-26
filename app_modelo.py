@@ -286,7 +286,7 @@ with ui.nav_panel("Painel de Previsões"):
                 with ui.nav_panel("", icon = icon_svg("chart-line")):
                     @render.plot
                     def cambio1():
-                        plt = gerar_grafico(df_cambio, "Câmbio", input.modelo(), "R\$/US\$", False)
+                        plt = gerar_grafico(df_cambio, "Câmbio", input.modelo(), f"R\\$/US\\$", False)
                         return plt
 
                 with ui.nav_panel(" ", icon = icon_svg("table")):
