@@ -243,3 +243,4 @@ df_tratado_ifi = (
     .drop(labels = ["lim_inf", "lim_sup"], axis = "columns")
     .set_index("data")
 )
+
