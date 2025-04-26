@@ -50,7 +50,7 @@ app_ui = ui.page_navbar(
     ),
     fillable=True,
     fillable_mobile=True,
-    theme = theme.minty,
+    theme = theme.superhero,
     window_title = "Painel de Previsao",
     sidebar = ui.sidebar(
         ui.markdown("Acompanhe as previsões automatizadas dos principais indicadores macroeconômicos do Brasil e simule cenários alternativos em um mesmo dashboard."),
@@ -58,8 +58,8 @@ app_ui = ui.page_navbar(
         ui.input_selectize(
                 id = "modelo",
                 label = ui.strong("Selecionar modelos:"),
-                choices = ["a" , "b"],
-                selected = ["a" , "b"],
+                choices = ["IA" , "Ridge" , "Bayesian Ridge" , "Huber" , "Ensemble"],
+                selected = ["IA" , "Ridge" , "Bayesian Ridge" , "Huber" , "Ensemble"],
                 multiple = True,
                 width = "100%",
                 options = {"plugins": ["clear_button"]}
@@ -74,6 +74,16 @@ app_ui = ui.page_navbar(
             startview = "year",
             language = "pt-BR",
             width = "100%"
+        ),
+        ui.input_checkbox(
+                id = "ic",
+                label = ui.strong("Intervalo de confiança"),
+                value = True,
+                width = "100%"
+            ),
+
+        ui.markdown(
+            "Elaboração:ThomasKaiqueTTK | Data Science"
         )
     ),
 
