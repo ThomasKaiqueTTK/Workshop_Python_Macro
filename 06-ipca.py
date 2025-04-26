@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 import os
 
+#incluir os.environ["GEMINI_API_KEY"] = "TOKEN" antes de rodar o codigo
 
 # Definições e configurações globais
 h = 12 # horizonte de previsão
